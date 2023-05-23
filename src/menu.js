@@ -1,14 +1,6 @@
 export default function loadMenuPage() {
-  const content = document.querySelector("#content");
-  content.innerHTML = `<div class="header">
-        <div class="header__name">Aurelia Elysium</div>
-        <ul class="nav-bar">
-          <li>Menu</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-      </div>
-      <div class="main menu-container">
+  const main = document.querySelector("#main");
+  main.innerHTML = `
        <div class="main__menu">
         <div class="item">
           <div class="item__img-cont"><img class="item__img" src="/imgs/menu/brisket.jpg" alt="brisket"></div>
@@ -52,6 +44,11 @@ export default function loadMenuPage() {
             <div class="item__price">14$</div>
           </div>
       </div>
-       </div>
-    </div>`;
+       </div>`;
+
+  main.className = "";
+  main.classList.add("menu-container");
+
+  // main.classList.remove("about-container");
+  // main.classlist.remove("contact-container");
 }

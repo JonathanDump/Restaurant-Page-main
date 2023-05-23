@@ -3,7 +3,7 @@ body {
   color: white;
   font-family: "DM Serif Display", serif;
   min-height: 100vh;
-  display: flex;
+  width: auto;
   background-image: url(/imgs/restaurant.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -11,7 +11,7 @@ body {
           backdrop-filter: blur(5px);
 }
 body #content {
-  flex: auto;
+  min-height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@ body #content .header {
   padding: 16px 64px 16px 64px;
   gap: 32px;
 }
-body #content .header__name {
+body #content .header #greeting {
   font-size: 32px;
   cursor: pointer;
   text-align: center;
@@ -46,7 +46,7 @@ body #content .header .nav-bar > li:hover {
   color: black;
   background-color: rgba(255, 255, 255, 0.801);
 }
-body #content .main {
+body #content #main {
   position: relative;
   height: 100%;
   display: flex;
@@ -54,20 +54,20 @@ body #content .main {
   align-items: center;
   justify-content: center;
   gap: 64px;
-  padding: 32px 64px;
+  padding: 32px;
   flex-basis: 100%;
 }
-body #content .main__description {
+body #content #main .main__description {
   text-align: center;
   color: white;
   font-size: 32px;
   max-width: 600px;
 }
-body #content .main__description > span {
+body #content #main .main__description > span {
   background-color: rgba(255, 255, 255, 0.8);
   color: black;
 }
-body #content .main__book-btn {
+body #content #main .main__book-btn {
   cursor: pointer;
   font-size: 26px;
   color: black;
@@ -79,7 +79,7 @@ body #content .main__book-btn {
   transition: ease 0.25s;
   padding: 6px 12px 6px 12px;
 }
-body #content .main__book-btn:hover {
+body #content #main .main__book-btn:hover {
   color: white;
   box-shadow: inset 0 2em rgb(0, 0, 0);
 }
@@ -87,12 +87,21 @@ body #content .about-container {
   font-size: 22px;
   color: white;
 }
+body #content .about-container .about {
+  width: 100%;
+  max-width: 800px;
+}
+
+.button-active {
+  color: black;
+  background-color: white;
+}
 
 @media (max-width: 600px) {
   body {
     overflow: auto;
   }
-  body #content .main {
+  body #content #main {
     justify-content: start;
     padding: 64px;
   }
@@ -104,13 +113,13 @@ body #content .about-container {
   body #content .header .nav-bar {
     gap: 16px;
   }
-  body #content .main {
+  body #content #main {
     padding: 32px;
   }
-  body #content .main__description {
+  body #content #main .main__description {
     font-size: 22px;
   }
-  body #content .main__book-btn {
+  body #content #main .main__book-btn {
     font-size: 16px;
   }
 }/*# sourceMappingURL=style.css.map */

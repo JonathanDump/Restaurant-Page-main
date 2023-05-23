@@ -1,14 +1,7 @@
 export default function loadAboutPage() {
-  const content = document.querySelector("#content");
-  content.innerHTML = ` <div class="header">
-        <div class="header__name">Aurelia Elysium</div>
-        <ul class="nav-bar">
-          <li>Menu</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-      </div>
-      <div class="main about-container">
+  const main = document.querySelector("#main");
+
+  main.innerHTML = ` 
         <div class="about">
           Welcome to Aurelia Elysium, where culinary excellence and enchanting
           ambiance merge to create an unforgettable dining experience. Nestled
@@ -45,6 +38,11 @@ export default function loadAboutPage() {
           power of bringing people together. Join us on this enchanting culinary
           journey, where every bite ignites your senses and every moment becomes
           a cherished memory.
-        </div>
-      </div>`;
+        </div>`;
+
+  main.className = "";
+  main.classList.add("about-container");
+
+  // main.classlist.remove("menu-container");
+  // main.classlist.remove("contact-container");
 }

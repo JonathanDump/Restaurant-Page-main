@@ -1,31 +1,31 @@
-body #content .main.contact-container .about {
+body #content #main.contact-container .about {
   display: flex;
   gap: 16px;
   width: 100%;
   max-width: 1200px;
 }
-body #content .main.contact-container .about__info {
+body #content #main.contact-container .about__info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   font-size: 22px;
 }
-body #content .main.contact-container .about__map {
+body #content #main.contact-container .about__map {
   width: 100%;
   max-width: 100%;
   display: block;
 }
-body #content .main.contact-container .about__map iframe {
+body #content #main.contact-container .about__map iframe {
   width: 100% !important;
   height: 500px !important;
   display: block;
 }
 
 @media (max-width: 980px) {
-  body #content .main.contact-container .about {
+  body #content #main.contact-container .about {
     flex-direction: column;
   }
-  body #content .main.contact-container .about__info {
+  body #content #main.contact-container .about__info {
     gap: 16px;
   }
 }/*# sourceMappingURL=contact.css.map */
