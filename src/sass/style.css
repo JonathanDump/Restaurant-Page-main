@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+body {
+  color: white;
+  font-family: "DM Serif Display", serif;
+  min-height: 100vh;
+  display: flex;
+  background-image: url(/imgs/restaurant.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+body #content {
+  flex: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+body #content .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 16px 64px 16px 64px;
+  gap: 32px;
+}
+body #content .header__name {
+  font-size: 32px;
+  cursor: pointer;
+  text-align: center;
+}
+body #content .header .nav-bar {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 32px;
+  font-size: 22px;
+}
+body #content .header .nav-bar > li {
+  cursor: pointer;
+  transition: ease 0.25s;
+  padding: 6px 12px 6px 12px;
+}
+body #content .header .nav-bar > li:hover {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.801);
+}
+body #content .main {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  padding: 32px 64px;
+  flex-basis: 100%;
+}
+body #content .main__description {
+  text-align: center;
+  color: white;
+  font-size: 32px;
+  max-width: 600px;
+}
+body #content .main__description > span {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+body #content .main__book-btn {
+  cursor: pointer;
+  font-size: 26px;
+  color: black;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: ease 0.25s;
+  padding: 6px 12px 6px 12px;
+}
+body #content .main__book-btn:hover {
+  color: white;
+  box-shadow: inset 0 2em rgb(0, 0, 0);
+}
+body #content .about-container {
+  font-size: 22px;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow: auto;
+  }
+  body #content .main {
+    justify-content: start;
+    padding: 64px;
+  }
+  .header {
+    flex-direction: column;
+  }
+}
+@media (max-width: 450px) {
+  body #content .header .nav-bar {
+    gap: 16px;
+  }
+  body #content .main {
+    padding: 32px;
+  }
+  body #content .main__description {
+    font-size: 22px;
+  }
+  body #content .main__book-btn {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=style.css.map */

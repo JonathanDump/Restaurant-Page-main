@@ -1,0 +1,50 @@
+body {
+  #content {
+    .main.contact-container {
+      .about {
+        display: flex;
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 16px;
+        width: 100%;
+        max-width: 1200px;
+
+        &__info {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          font-size: 22px;
+        }
+        &__map {
+          width: 100%;
+          max-width: 100%;
+          display: block;
+          // height: 30vh;
+          // width: 40vw;
+
+          iframe {
+            width: 100% !important;
+            height: 500px !important;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  body {
+    #content {
+      .main.contact-container {
+        .about {
+          flex-direction: column;
+
+          &__info {
+            gap: 16px;
+          }
+        }
+      }
+    }
+  }
+}
